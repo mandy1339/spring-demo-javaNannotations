@@ -2,18 +2,24 @@ package com.coaches;
 
 import com.fortuneservices.FortuneService;
 
-public class SwimCoach implements Coach {
+
+
+public class LifeCoach implements Coach {
 
 	private FortuneService fortuneService;
 	
-	// constructor
-	public SwimCoach(FortuneService fortuneService) {
+	// constructors
+	public LifeCoach() {
+		
+	}
+	
+	public LifeCoach(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 	
 	@Override
 	public String getDailyWorkout() {
-		return "Swim 20 laps";
+		return "relax and make progress";
 	}
 
 	@Override

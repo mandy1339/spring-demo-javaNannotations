@@ -11,11 +11,10 @@ import com.fortuneservices.FortuneService;
 @Scope("prototype")
 public class FishKeepingCoach implements Coach {
 	
-//	@Autowired								// FIELD INJECTION
-//    @Qualifier("randomFortuneService")
+
 	private FortuneService fortuneService;		
 
-	@Autowired
+	@Autowired		// CONSTRUCTOR INJECTION
 	public FishKeepingCoach(@Qualifier("randomFortuneService") FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
